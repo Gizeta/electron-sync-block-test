@@ -32,5 +32,16 @@ ipcMain.on('block1', (event) => {
 ipcMain.on('block2', (event) => {
   setTimeout(() => {
     event.returnValue = '';
-  }, 5000);
+  }, 10000);
+});
+
+ipcMain.on('block3', (event) => {
+  const bigNum = 149999;
+  for(var i = 0; i < bigNum; i++)
+    for(var j = 0; j < bigNum; j++)
+      ;
+});
+
+
+ipcMain.on('block4', (event) => {
 });

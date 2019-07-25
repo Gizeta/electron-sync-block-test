@@ -148,6 +148,12 @@ onload = function() {
   document.querySelector('#block2').onclick = function() {
     ipcRenderer.sendSync('block2');
   }
+  document.querySelector('#block3').onclick = function() {
+    ipcRenderer.send('block3');
+  }
+  document.querySelector('#block4').onclick = function() {
+    ipcRenderer.send('block4');
+  }
 
   setInterval(() => {
     document.title = `${+new Date()}`;
